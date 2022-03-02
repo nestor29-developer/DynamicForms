@@ -11,7 +11,12 @@ const Element = ({
     field_placeholder,
     field_value,
     field_options,
-  },
+    field_mandatory,
+    field_mandatory_active,
+    type,
+    label_mandatory,
+    error_msg
+  }
 }) => {
   switch (data_type) {
     case "string":
@@ -21,6 +26,11 @@ const Element = ({
           label={label}
           field_placeholder={field_placeholder}
           field_value={field_value}
+          field_mandatory={field_mandatory} 
+          type={type}
+          label_mandatory={label_mandatory}
+          error_msg={error_msg}
+          field_mandatory_active={field_mandatory_active}
         />
       );
     case "select":
